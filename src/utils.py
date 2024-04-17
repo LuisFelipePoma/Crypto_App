@@ -20,12 +20,6 @@ CATEGORIES = ["memes", "game", "gaming", "ai", "real world assets"]
 regex_pattern = r"\b(?:{})\b".format("|".join(CATEGORIES))
 regex = re.compile(regex_pattern, re.IGNORECASE)
 
-
-# Función para imprimir los datos de una forma más legible
-def pretty_print(data):
-    print(json.dumps(data, indent=2))
-
-
 # Enum para las APIs
 class APIS(Enum):
     COINMARKET = {
