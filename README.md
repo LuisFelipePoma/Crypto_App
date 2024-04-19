@@ -2,7 +2,7 @@
 
 # How to use
 
-## Set the environment variables
+## Create the file `.env` on the folder `src` Set the environment variables
 
 ```bash
 # .env file

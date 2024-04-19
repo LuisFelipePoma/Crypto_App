@@ -12,13 +12,12 @@ import random
 
 load_dotenv()
 
-
-# Las categorias a buscar
-CATEGORIES = ["memes", "game", "gaming", "ai", "real world assets"]
-
-# Crear una expresión regular que coincida con cualquier palabra clave
-regex_pattern = r"\b(?:{})\b".format("|".join(CATEGORIES))
-regex = re.compile(regex_pattern, re.IGNORECASE)
+# Crear una expresión regular para coincidir con las palabras clave
+def create_regex(words:list[str]):
+    # Crear una expresión regular que coincida con cualquier palabra clave
+    regex_pattern = r"\b(?:{})\b".format("|".join(words))
+    regex = re.compile(regex_pattern, re.IGNORECASE)
+    return regex
 
 # Enum para las APIs
 class APIS(Enum):
