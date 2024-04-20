@@ -1,1 +1,93 @@
-[{"id": "6604f2405726cb6104472fdb", "name": "Presale Memes", "title": "Presale Memes", "description": "Presale Memes", "num_tokens": 3, "avg_price_change": 1.75477079, "market_cap": 199679189.24, "market_cap_change": -1.40485, "volume": 126740191.76593567, "volume_change": -5.589650000000001, "last_updated": "2024-03-28T04:30:07.129Z"}, {"id": "6400b58c1701313dc2e853a9", "name": "Real World Assets", "title": "Real World Assets", "description": "Real World Assets", "num_tokens": 135, "avg_price_change": 2.814780658829788, "market_cap": 41436451023.10999, "market_cap_change": 2.9945308510638298, "volume": 2191827852.536222, "volume_change": 32.7836744680851, "last_updated": "2023-08-09T13:49:03.331Z"}, {"id": "63ff40541701313dc2e81ead", "name": "Generative AI", "title": "Generative AI", "description": "Generative AI", "num_tokens": 85, "avg_price_change": 2.694298819342106, "market_cap": 14693942500.130001, "market_cap_change": 2.1496605263157904, "volume": 755553331.2841963, "volume_change": -17.881864473684207, "last_updated": "2023-08-09T13:49:49.320Z"}, {"id": "6192765a2696b919a04444ea", "name": "Gaming Guild", "title": "Gaming Guild", "description": "Gaming Guild", "num_tokens": 19, "avg_price_change": 1.539340819375, "market_cap": 2435603112.13, "market_cap_change": 0.54213125, "volume": 171500751.49818358, "volume_change": -4.774056250000001, "last_updated": "2023-08-09T13:46:23.321Z"}, {"id": "6051a82566fc1b42617d6dc6", "name": "Memes", "title": "Memes", "description": "Memes", "num_tokens": 2132, "avg_price_change": 5.078435747541438, "market_cap": 47849380326.240005, "market_cap_change": 0.6743726519337019, "volume": 5126073988.700507, "volume_change": 1708.501328545122, "last_updated": "2023-08-09T13:44:24.560Z"}, {"id": "6051a82166fc1b42617d6dc1", "name": "Gaming", "title": "Gaming", "description": "Gaming", "num_tokens": 672, "avg_price_change": 0.9477511151893088, "market_cap": 20883251054.11002, "market_cap_change": 0.7872788418708232, "volume": 1523510488.2495792, "volume_change": 124.97523452115817, "last_updated": "2023-08-09T13:46:51.200Z"}, {"id": "6051a81a66fc1b42617d6db7", "name": "AI & Big Data", "title": "AI & Big Data", "description": "AI & Big Data", "num_tokens": 295, "avg_price_change": 2.5124685258227837, "market_cap": 33213952231.509995, "market_cap_change": 1.73345105485232, "volume": 2038517932.177408, "volume_change": 18.397694092827003, "last_updated": "2021-11-10T10:37:35.660Z"}]
+[
+    {
+        "id": "6604f2405726cb6104472fdb",
+        "name": "Presale Memes",
+        "title": "Presale Memes",
+        "description": "Presale Memes",
+        "num_tokens": 3,
+        "avg_price_change": 1.75477079,
+        "market_cap": 199679189.24,
+        "market_cap_change": -1.40485,
+        "volume": 126740191.76593567,
+        "volume_change": -5.589650000000001,
+        "last_updated": "2024-03-28T04:30:07.129Z"
+    },
+    {
+        "id": "6400b58c1701313dc2e853a9",
+        "name": "Real World Assets",
+        "title": "Real World Assets",
+        "description": "Real World Assets",
+        "num_tokens": 135,
+        "avg_price_change": 2.814780658829788,
+        "market_cap": 41436451023.10999,
+        "market_cap_change": 2.9945308510638298,
+        "volume": 2191827852.536222,
+        "volume_change": 32.7836744680851,
+        "last_updated": "2023-08-09T13:49:03.331Z"
+    },
+    {
+        "id": "63ff40541701313dc2e81ead",
+        "name": "Generative AI",
+        "title": "Generative AI",
+        "description": "Generative AI",
+        "num_tokens": 85,
+        "avg_price_change": 2.694298819342106,
+        "market_cap": 14693942500.130001,
+        "market_cap_change": 2.1496605263157904,
+        "volume": 755553331.2841963,
+        "volume_change": -17.881864473684207,
+        "last_updated": "2023-08-09T13:49:49.320Z"
+    },
+    {
+        "id": "6192765a2696b919a04444ea",
+        "name": "Gaming Guild",
+        "title": "Gaming Guild",
+        "description": "Gaming Guild",
+        "num_tokens": 19,
+        "avg_price_change": 1.539340819375,
+        "market_cap": 2435603112.13,
+        "market_cap_change": 0.54213125,
+        "volume": 171500751.49818358,
+        "volume_change": -4.774056250000001,
+        "last_updated": "2023-08-09T13:46:23.321Z"
+    },
+    {
+        "id": "6051a82566fc1b42617d6dc6",
+        "name": "Memes",
+        "title": "Memes",
+        "description": "Memes",
+        "num_tokens": 2132,
+        "avg_price_change": 5.078435747541438,
+        "market_cap": 47849380326.240005,
+        "market_cap_change": 0.6743726519337019,
+        "volume": 5126073988.700507,
+        "volume_change": 1708.501328545122,
+        "last_updated": "2023-08-09T13:44:24.560Z"
+    },
+    {
+        "id": "6051a82166fc1b42617d6dc1",
+        "name": "Gaming",
+        "title": "Gaming",
+        "description": "Gaming",
+        "num_tokens": 672,
+        "avg_price_change": 0.9477511151893088,
+        "market_cap": 20883251054.11002,
+        "market_cap_change": 0.7872788418708232,
+        "volume": 1523510488.2495792,
+        "volume_change": 124.97523452115817,
+        "last_updated": "2023-08-09T13:46:51.200Z"
+    },
+    {
+        "id": "6051a81a66fc1b42617d6db7",
+        "name": "AI & Big Data",
+        "title": "AI & Big Data",
+        "description": "AI & Big Data",
+        "num_tokens": 295,
+        "avg_price_change": 2.5124685258227837,
+        "market_cap": 33213952231.509995,
+        "market_cap_change": 1.73345105485232,
+        "volume": 2038517932.177408,
+        "volume_change": 18.397694092827003,
+        "last_updated": "2021-11-10T10:37:35.660Z"
+    }
+]
