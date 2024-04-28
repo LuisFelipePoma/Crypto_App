@@ -1,3 +1,14 @@
+# ------------------------------------ Constantes ------------------------------------
+CATEGORIES_WORDS: list[str] = [
+    "meme",
+    "memes",
+    "game",
+    "gaming",
+    "ai",
+    "real world assets",
+]
+
+
 # -----------------------------------  Librerias Generales -----------------------------
 import os
 from datetime import date
@@ -33,6 +44,14 @@ class APIS(Enum):
         "headers": {
             "accept": "application/json",
             "x-messari-api-key": os.environ.get("API_KEY_MESSARI"),
+        },
+    }
+
+    COINGECKO = {
+        "url": "https://api.coingecko.com/api/v3/",
+        "headers": {
+            "accept": "application/json",
+            "x-cg-demo-api-key": os.environ.get("API_KEY_GECKO"),
         },
     }
 
