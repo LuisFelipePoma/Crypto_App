@@ -1,9 +1,7 @@
 # -----------------------------------  Librerias Generales -----------------------------
 import os
-from datetime import date
 from functools import reduce
 import time
-from typing import Callable
 
 # -----------------------------------  Variables de entorno (API KEYS) -----------------------------
 from dotenv import load_dotenv
