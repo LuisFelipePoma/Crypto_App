@@ -99,3 +99,8 @@ def find_columns_with_nulls(df: pd.DataFrame) -> list[tuple[str, int]]:
     columns: list[str] = df.columns[df.isnull().any()].tolist()
     nulls: list[int] = df[columns].isnull().sum().tolist()
     return list(zip(columns, nulls))
+
+# ---------------------------------------------------- Funciones para visualizar las graficas -------------------------------------
+
+import matplotlib.pyplot as plt
+import seaborn as sns
