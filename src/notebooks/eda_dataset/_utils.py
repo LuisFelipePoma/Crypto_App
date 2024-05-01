@@ -105,3 +105,4 @@ def find_columns_with_nulls(df: pd.DataFrame) -> list[tuple[str, int]]:
 import matplotlib.pyplot as plt
 import seaborn as sns
 from wordcloud import WordCloud
+from ast import literal_eval

@@ -1,4 +1,5 @@
 # -----------------------------------  Librerias Generales -----------------------------
+from ast import literal_eval
 import os
 from functools import reduce
 import time
@@ -185,4 +186,5 @@ def generate_rgb():
     color_hex = "#{:02x}{:02x}{:02x}".format(r, g, b)
 
     return color_hex
+
 
