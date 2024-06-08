@@ -16,16 +16,16 @@
 		"name": "Adventure Games"
 	},
 	{
+		"category_id": "aelf-ecosystem",
+		"name": "Aelf Ecosystem"
+	},
+	{
 		"category_id": "ai-agents",
 		"name": "AI Agents"
 	},
 	{
 		"category_id": "ai-meme-coins",
-		"name": "AI Meme Coins"
-	},
-	{
-		"category_id": "ai-themed-coins",
-		"name": "AI-Themed Coins"
+		"name": "AI Meme"
 	},
 	{
 		"category_id": "alameda-research-portfolio",
@@ -48,12 +48,20 @@
 		"name": "Analytics"
 	},
 	{
+		"category_id": "ancient8-ecosystem",
+		"name": "Ancient8 Ecosystem"
+	},
+	{
+		"category_id": "andreessen-horowitz-a16z-portfolio",
+		"name": "Andreessen Horowitz (a16z) Portfolio"
+	},
+	{
 		"category_id": "animal-racing",
 		"name": "Animal Racing"
 	},
 	{
 		"category_id": "anime-themed-coins",
-		"name": "Anime-Themed Coins"
+		"name": "Anime-Themed"
 	},
 	{
 		"category_id": "animoca-brands",
@@ -80,6 +88,10 @@
 		"name": "Arbitrum Nova Ecosystem"
 	},
 	{
+		"category_id": "archway-ecosystem",
+		"name": "Archway Ecosystem"
+	},
+	{
 		"category_id": "art",
 		"name": "Art"
 	},
@@ -100,12 +112,24 @@
 		"name": "Asset Manager"
 	},
 	{
+		"category_id": "astar-ecosystem",
+		"name": "Astar Ecosystem"
+	},
+	{
+		"category_id": "astar-zkevm-ecosystem",
+		"name": "Astar zkEVM Ecosystem"
+	},
+	{
 		"category_id": "atomicals-arc-20",
 		"name": "Atomicals (ARC-20)"
 	},
 	{
 		"category_id": "augmented-reality",
 		"name": "Augmented Reality"
+	},
+	{
+		"category_id": "aurora-ecosystem",
+		"name": "Aurora Ecosystem"
 	},
 	{
 		"category_id": "automated-market-maker-amm",
@@ -128,12 +152,16 @@
 		"name": "Azuki Ecosystem"
 	},
 	{
+		"category_id": "bahamut-ecosystem",
+		"name": "Bahamut Ecosystem"
+	},
+	{
 		"category_id": "base-ecosystem",
 		"name": "Base Ecosystem"
 	},
 	{
 		"category_id": "base-meme-coins",
-		"name": "Base Meme Coins"
+		"name": "Base Meme"
 	},
 	{
 		"category_id": "beam-ecosystem",
@@ -156,12 +184,20 @@
 		"name": "Big Data"
 	},
 	{
+		"category_id": "binance-labs-portfolio",
+		"name": "Binance Labs Portfolio"
+	},
+	{
 		"category_id": "binance-launchpad",
 		"name": "Binance Launchpad"
 	},
 	{
 		"category_id": "binance-launchpool",
 		"name": "Binance Launchpool"
+	},
+	{
+		"category_id": "binance-megadrop",
+		"name": "Binance Megadrop"
 	},
 	{
 		"category_id": "bitcichain-ecosystem",
@@ -188,16 +224,44 @@
 		"name": "Bitlayer Ecosystem"
 	},
 	{
+		"category_id": "bitrock-ecosystem",
+		"name": "Bitrock Ecosystem"
+	},
+	{
+		"category_id": "bitstarters-launchpad",
+		"name": "BitStarters Launchpad"
+	},
+	{
+		"category_id": "bittorrent-ecosystem",
+		"name": "BitTorrent Ecosystem"
+	},
+	{
 		"category_id": "blast-ecosystem",
 		"name": "Blast Ecosystem"
+	},
+	{
+		"category_id": "blockchain-capital-portfolio",
+		"name": "Blockchain Capital Portfolio"
 	},
 	{
 		"category_id": "binance-smart-chain",
 		"name": "BNB Chain Ecosystem"
 	},
 	{
+		"category_id": "boba-bnb-ecosystem",
+		"name": "Boba BNB Ecosystem"
+	},
+	{
+		"category_id": "boba-network-ecosystem",
+		"name": "Boba Network Ecosystem"
+	},
+	{
 		"category_id": "bored-ape-ecosystem",
 		"name": "Bored Ape Ecosystem"
+	},
+	{
+		"category_id": "bouncebit-ecosystem",
+		"name": "BounceBit Ecosystem"
 	},
 	{
 		"category_id": "brc-20",
@@ -245,7 +309,11 @@
 	},
 	{
 		"category_id": "cat-themed-coins",
-		"name": "Cat-Themed Coins"
+		"name": "Cat-Themed"
+	},
+	{
+		"category_id": "celebrity-themed-coins",
+		"name": "Celebrity-Themed"
 	},
 	{
 		"category_id": "celer-network",
@@ -276,6 +344,10 @@
 		"name": "Chromia Ecosystem"
 	},
 	{
+		"category_id": "circle-ventures-portfolio",
+		"name": "Circle Ventures Portfolio"
+	},
+	{
 		"category_id": "cny-stablecoin",
 		"name": "CNY Stablecoin"
 	},
@@ -296,8 +368,24 @@
 		"name": "Compound Tokens"
 	},
 	{
+		"category_id": "conflux-ecosystem",
+		"name": "Conflux Ecosystem"
+	},
+	{
+		"category_id": "consensys-portofolio",
+		"name": "Consensys Portfolio"
+	},
+	{
+		"category_id": "core-ecosystem",
+		"name": "Core Ecosystem"
+	},
+	{
 		"category_id": "cosmos-ecosystem",
 		"name": "Cosmos Ecosystem"
+	},
+	{
+		"category_id": "country-themed-meme-coins",
+		"name": "Country-Themed Meme"
 	},
 	{
 		"category_id": "cronos-ecosystem",
@@ -348,6 +436,10 @@
 		"name": "Decentralized Science (DeSci)"
 	},
 	{
+		"category_id": "defiance-capital-portfolio",
+		"name": "DeFiance Capital Portfolio"
+	},
+	{
 		"category_id": "defi-index",
 		"name": "DeFi Index"
 	},
@@ -364,12 +456,20 @@
 		"name": "DeLabs"
 	},
 	{
+		"category_id": "delphi-digital-portfolio",
+		"name": "Delphi Digital Portfolio"
+	},
+	{
 		"category_id": "depin",
 		"name": "DePIN"
 	},
 	{
 		"category_id": "decentralized-derivatives",
 		"name": "Derivatives"
+	},
+	{
+		"category_id": "dfk-chain-ecosystem",
+		"name": "DFK Chain Ecosystem"
 	},
 	{
 		"category_id": "discord-bots",
@@ -380,12 +480,20 @@
 		"name": " DN-404"
 	},
 	{
+		"category_id": "dogechain-ecosystem",
+		"name": "Dogechain Ecosystem"
+	},
+	{
 		"category_id": "dog-themed-coins",
-		"name": "Dog-Themed Coins"
+		"name": "Dog-Themed"
 	},
 	{
 		"category_id": "doodles-llc",
 		"name": "Doodles LLC"
+	},
+	{
+		"category_id": "dragonfly-capital-portfolio",
+		"name": "DragonFly Capital Portfolio"
 	},
 	{
 		"category_id": "drc-20",
@@ -393,7 +501,7 @@
 	},
 	{
 		"category_id": "duck-themed-coins",
-		"name": "Duck-Themed Coins"
+		"name": "Duck-Themed"
 	},
 	{
 		"category_id": "dwf-labs-portfolio",
@@ -412,8 +520,20 @@
 		"name": "eGirl Capital Portfolio"
 	},
 	{
+		"category_id": "elastos-smart-contract-chain-ecosystem",
+		"name": "Elastos Smart Contract Chain Ecosystem"
+	},
+	{
 		"category_id": "elon-musk-inspired-coins",
-		"name": "Elon Musk-Inspired Coins"
+		"name": "Elon Musk-Inspired"
+	},
+	{
+		"category_id": "endurance-ecosystem",
+		"name": "Endurance Ecosystem"
+	},
+	{
+		"category_id": "energi-ecosystem",
+		"name": "Energi Ecosystem"
 	},
 	{
 		"category_id": "energy",
@@ -422,6 +542,14 @@
 	{
 		"category_id": "entertainment",
 		"name": "Entertainment"
+	},
+	{
+		"category_id": "eos-ecosystem",
+		"name": "EOS Ecosystem"
+	},
+	{
+		"category_id": "erc20i",
+		"name": "ERC20i"
 	},
 	{
 		"category_id": "erc-404",
@@ -438,6 +566,10 @@
 	{
 		"category_id": "eth-2-0-staking",
 		"name": "Eth 2.0 Staking"
+	},
+	{
+		"category_id": "ethereum-classic-ecosystem",
+		"name": "Ethereum Classic Ecosystem"
 	},
 	{
 		"category_id": "ethereum-ecosystem",
@@ -464,6 +596,10 @@
 		"name": "EUR Stablecoin"
 	},
 	{
+		"category_id": "evmos-ecosystem",
+		"name": "Evmos Ecosystem"
+	},
+	{
 		"category_id": "exchange-based-tokens",
 		"name": "Exchange-based Tokens"
 	},
@@ -478,6 +614,10 @@
 	{
 		"category_id": "fantom-ecosystem",
 		"name": "Fantom Ecosystem"
+	},
+	{
+		"category_id": "fantom-sonic-ecosystem",
+		"name": "Fantom Sonic Ecosystem"
 	},
 	{
 		"category_id": "farcaster-ecosystem",
@@ -504,6 +644,10 @@
 		"name": "Fixed Interest"
 	},
 	{
+		"category_id": "flare-network-ecosystem",
+		"name": "Flare Network Ecosystem"
+	},
+	{
 		"category_id": "flooring-protocol",
 		"name": "Floor Protocol"
 	},
@@ -516,16 +660,32 @@
 		"name": "Fractionalized NFT"
 	},
 	{
+		"category_id": "fraxtal-ecosystem",
+		"name": "Fraxtal Ecosystem"
+	},
+	{
 		"category_id": "friend-tech",
 		"name": "friend.tech"
 	},
 	{
 		"category_id": "frog-themed-coins",
-		"name": "Frog-Themed Coins"
+		"name": "Frog-Themed"
 	},
 	{
 		"category_id": "ftx-holdings",
 		"name": "FTX Holdings"
+	},
+	{
+		"category_id": "fuse-ecosystem",
+		"name": "Fuse Ecosystem"
+	},
+	{
+		"category_id": "galachain-ecosystem",
+		"name": "GalaChain Ecosystem"
+	},
+	{
+		"category_id": "galaxy-digital-portfolio",
+		"name": "Galaxy Digital Portfolio"
 	},
 	{
 		"category_id": "gambling",
@@ -560,6 +720,30 @@
 		"name": "Gig Economy"
 	},
 	{
+		"category_id": "gmci-30-index",
+		"name": "GMCI 30 Index"
+	},
+	{
+		"category_id": "gmci-defi-index",
+		"name": "GMCI DeFi Index"
+	},
+	{
+		"category_id": "gmci-depin-index",
+		"name": "GMCI DePIN Index"
+	},
+	{
+		"category_id": "gmci-layer-1-index",
+		"name": "GMCI Layer 1 Index"
+	},
+	{
+		"category_id": "gmci-layer-2-index",
+		"name": "GMCI Layer 2 Index"
+	},
+	{
+		"category_id": "gmci-meme-index",
+		"name": "GMCI Meme Index"
+	},
+	{
 		"category_id": "xdai-ecosystem",
 		"name": "Gnosis Chain Ecosystem"
 	},
@@ -590,6 +774,18 @@
 	{
 		"category_id": "hedera-ecosystem",
 		"name": "Hedera Ecosystem"
+	},
+	{
+		"category_id": "huobi-eco-chain-ecosystem",
+		"name": "Huobi ECO Chain Ecosystem"
+	},
+	{
+		"category_id": "hydra-ecosystem",
+		"name": "Hydra Ecosystem"
+	},
+	{
+		"category_id": "hyperliquid-ecosystem",
+		"name": "Hyperliquid Ecosystem"
 	},
 	{
 		"category_id": "identity",
@@ -626,6 +822,10 @@
 	{
 		"category_id": "insurance",
 		"name": "Insurance"
+	},
+	{
+		"category_id": "intent",
+		"name": "Intent"
 	},
 	{
 		"category_id": "internet-computer-ecosystem",
@@ -688,6 +888,10 @@
 		"name": "KRW Stablecoin"
 	},
 	{
+		"category_id": "kucoin-community-chain-ecosystem",
+		"name": "Kucoin Community Chain Ecosystem"
+	},
+	{
 		"category_id": "kujira-ecosystem",
 		"name": "Kujira Ecosystem"
 	},
@@ -728,6 +932,10 @@
 		"name": "Leveraged Token"
 	},
 	{
+		"category_id": "lightlink-ecosystem",
+		"name": "LightLink Ecosystem"
+	},
+	{
 		"category_id": "linea-ecosystem",
 		"name": "Linea Ecosystem"
 	},
@@ -738,6 +946,10 @@
 	{
 		"category_id": "liquid-restaking-tokens",
 		"name": "Liquid Restaking Tokens"
+	},
+	{
+		"category_id": "liquid-staked-sol",
+		"name": "Liquid Staked SOL"
 	},
 	{
 		"category_id": "liquid-staking-governance-tokens",
@@ -784,6 +996,10 @@
 		"name": "Marketing"
 	},
 	{
+		"category_id": "massa-ecosystem",
+		"name": "Massa Ecosystem"
+	},
+	{
 		"category_id": "masternodes",
 		"name": "Masternodes"
 	},
@@ -812,6 +1028,10 @@
 		"name": "Metaverse"
 	},
 	{
+		"category_id": "meter-ecosystem",
+		"name": "Meter Ecosystem"
+	},
+	{
 		"category_id": "metis-ecosystem",
 		"name": "Metis Ecosystem"
 	},
@@ -822,6 +1042,14 @@
 	{
 		"category_id": "mid-cap",
 		"name": "Mid-Cap PFP"
+	},
+	{
+		"category_id": "migaloo-ecosystem",
+		"name": "Migaloo Ecosystem"
+	},
+	{
+		"category_id": "milkomeda-cardano-ecosystem",
+		"name": "Milkomeda (Cardano) Ecosystem"
 	},
 	{
 		"category_id": "mirrored-assets",
@@ -860,8 +1088,16 @@
 		"name": "Music"
 	},
 	{
+		"category_id": "nahmii-ecosystem",
+		"name": "Nahmii Ecosystem"
+	},
+	{
 		"category_id": "near-protocol-ecosystem",
 		"name": "Near Protocol Ecosystem"
+	},
+	{
+		"category_id": "neo-ecosystem",
+		"name": "NEO Ecosystem"
 	},
 	{
 		"category_id": "neon-ecosystem",
@@ -900,6 +1136,18 @@
 		"name": "Number"
 	},
 	{
+		"category_id": "oasis-emerald-ecosystem",
+		"name": "Oasis Emerald Ecosystem"
+	},
+	{
+		"category_id": "oasis-sapphire-ecosystem",
+		"name": "Oasis Sapphire Ecosystem"
+	},
+	{
+		"category_id": "oasys-ecosystem",
+		"name": "Oasys Ecosystem"
+	},
+	{
 		"category_id": "ocm-ecosystem",
 		"name": "OCM Ecosystem"
 	},
@@ -912,12 +1160,28 @@
 		"name": "Ohm Fork"
 	},
 	{
+		"category_id": "okt-chain-ecosystem",
+		"name": "OKT Chain Ecosystem"
+	},
+	{
+		"category_id": "okx-ventures-portfolio",
+		"name": "OKX Ventures Portfolio"
+	},
+	{
 		"category_id": "olympus-pro",
 		"name": "Olympus Pro"
 	},
 	{
+		"category_id": "omnia-ecosystem",
+		"name": "Omnia Ecosystem"
+	},
+	{
 		"category_id": "on-chain-gaming",
 		"name": "On-chain Gaming"
+	},
+	{
+		"category_id": "opbnb-ecocystem",
+		"name": "opBNB Ecocystem"
 	},
 	{
 		"category_id": "optimism-ecosystem",
@@ -932,12 +1196,20 @@
 		"name": "Oracle"
 	},
 	{
+		"category_id": "oraichain-ecosystem",
+		"name": "Oraichain Ecosystem"
+	},
+	{
 		"category_id": "osmosis-ecosytem",
 		"name": "Osmosis Ecosystem"
 	},
 	{
 		"category_id": "paal-ai",
 		"name": "PAAL AI"
+	},
+	{
+		"category_id": "pantera-capital-portfolio",
+		"name": "Pantera Capital Portfolio"
 	},
 	{
 		"category_id": "paradigm-portfolio",
@@ -953,7 +1225,7 @@
 	},
 	{
 		"category_id": "parody-meme-coins",
-		"name": "Parody Meme Coins"
+		"name": "Parody Meme"
 	},
 	{
 		"category_id": "payment-solutions",
@@ -988,6 +1260,10 @@
 		"name": "Polygon Ecosystem"
 	},
 	{
+		"category_id": "polygon-zkevm-ecosystem",
+		"name": "Polygon zkEVM Ecosystem"
+	},
+	{
 		"category_id": "poolz-finance-launchpad",
 		"name": "Poolz Finance Launchpad"
 	},
@@ -997,15 +1273,19 @@
 	},
 	{
 		"category_id": "presale-meme-coins",
-		"name": "Presale Meme Coins"
+		"name": "Presale Meme "
 	},
 	{
 		"category_id": "privacy-coins",
-		"name": "Privacy Coins"
+		"name": "Privacy"
 	},
 	{
 		"category_id": "proof-ecosystem",
 		"name": "Proof Ecosystem"
+	},
+	{
+		"category_id": "proof-of-memes-ecosystem",
+		"name": "Proof of Memes Ecosystem"
 	},
 	{
 		"category_id": "proof-of-stake-pos",
@@ -1038,6 +1318,10 @@
 	{
 		"category_id": "radix-ecosystem",
 		"name": "Radix Ecosystem"
+	},
+	{
+		"category_id": "re-al-ecosystem",
+		"name": "Re.al Ecosystem"
 	},
 	{
 		"category_id": "real-estate",
@@ -1096,6 +1380,10 @@
 		"name": "Ronin Ecosystem"
 	},
 	{
+		"category_id": "rootstock-ecosystem",
+		"name": "Rootstock Ecosystem"
+	},
+	{
 		"category_id": "rpg",
 		"name": "RPG"
 	},
@@ -1104,8 +1392,16 @@
 		"name": "Runes"
 	},
 	{
+		"category_id": "sanko-ecosystem",
+		"name": "Sanko Ecosystem"
+	},
+	{
 		"category_id": "scroll-ecosystem",
 		"name": "Scroll Ecosystem"
+	},
+	{
+		"category_id": "secret-ecosystem",
+		"name": "Secret Ecosystem"
 	},
 	{
 		"category_id": "sei-ecosystem",
@@ -1116,12 +1412,24 @@
 		"name": "Seigniorage"
 	},
 	{
+		"category_id": "sei-v2-ecosystem",
+		"name": "Sei V2 Ecosystem"
+	},
+	{
+		"category_id": "sequoia-capital-portfolio",
+		"name": "Sequoia Capital Portfolio"
+	},
+	{
 		"category_id": "sgd-stablcoin",
 		"name": "SGD Stablcoin"
 	},
 	{
 		"category_id": "shibarium",
 		"name": "Shibarium Ecosystem"
+	},
+	{
+		"category_id": "shimmerevm-ecosystem",
+		"name": "ShimmerEVM Ecosystem"
 	},
 	{
 		"category_id": "shooting-games",
@@ -1134,6 +1442,14 @@
 	{
 		"category_id": "simulation-games",
 		"name": "Simulation Games"
+	},
+	{
+		"category_id": "skale-ecosystem",
+		"name": "Skale Ecosystem"
+	},
+	{
+		"category_id": "smartbch-ecosystem",
+		"name": "SmartBCH Ecosystem"
 	},
 	{
 		"category_id": "smart-contract-platform",
@@ -1153,11 +1469,23 @@
 	},
 	{
 		"category_id": "solana-meme-coins",
-		"name": "Solana Meme Coins"
+		"name": "Solana Meme"
 	},
 	{
 		"category_id": "token-2022",
 		"name": "Solana Token-2022"
+	},
+	{
+		"category_id": "songbird-ecosystem",
+		"name": "Songbird Ecosystem"
+	},
+	{
+		"category_id": "sora-ecosystem",
+		"name": "Sora Ecosystem"
+	},
+	{
+		"category_id": "spartan-group-portfolio",
+		"name": "Spartan Group Portfolio"
 	},
 	{
 		"category_id": "spl22",
@@ -1200,6 +1528,10 @@
 		"name": "Step Network Ecosystem"
 	},
 	{
+		"category_id": "sticker-themed-coin",
+		"name": "Sticker-Themed Coins"
+	},
+	{
 		"category_id": "storage",
 		"name": "Storage"
 	},
@@ -1224,6 +1556,10 @@
 		"name": "Synths"
 	},
 	{
+		"category_id": "syscoin-nevm-ecosystem",
+		"name": "Syscoin NEVM Ecosystem"
+	},
+	{
 		"category_id": "technology-science",
 		"name": "Technology & Science"
 	},
@@ -1232,8 +1568,16 @@
 		"name": "Telegram Apps"
 	},
 	{
+		"category_id": "telos-ecosystem",
+		"name": "Telos Ecosystem"
+	},
+	{
 		"category_id": "tenet-ecosystem",
 		"name": "Tenet Ecosystem"
+	},
+	{
+		"category_id": "terra-classic-ecosystem",
+		"name": "Terra Classic Ecosystem"
 	},
 	{
 		"category_id": "terra-ecosystem",
@@ -1246,6 +1590,10 @@
 	{
 		"category_id": "theta-ecosystem",
 		"name": "Theta Ecosystem"
+	},
+	{
+		"category_id": "thundercore-ecosystem",
+		"name": "ThunderCore Ecosystem"
 	},
 	{
 		"category_id": "tokenfi-launchpad",
@@ -1293,7 +1641,7 @@
 	},
 	{
 		"category_id": "ton-meme-coins",
-		"name": "TON Meme Coins"
+		"name": "TON Meme"
 	},
 	{
 		"category_id": "tourism",
@@ -1324,16 +1672,60 @@
 		"name": "uTokens"
 	},
 	{
+		"category_id": "uton-ecosystem",
+		"name": "UTON Ecosystem"
+	},
+	{
+		"category_id": "vanar-chain-ecosystem",
+		"name": "Vanar Chain Ecosystem"
+	},
+	{
+		"category_id": "vechain-ecosystem",
+		"name": "VeChain Ecosystem"
+	},
+	{
 		"category_id": "velas-ecosystem",
 		"name": "Velas Ecosystem"
+	},
+	{
+		"category_id": "venom-ecosystem",
+		"name": "Venom Ecosystem"
+	},
+	{
+		"category_id": "venture-capital-portfolios",
+		"name": "Venture Capital Portfolios"
+	},
+	{
+		"category_id": "viction-ecocystem",
+		"name": "Viction Ecocystem"
 	},
 	{
 		"category_id": "virtual-reality",
 		"name": "Virtual Reality"
 	},
 	{
+		"category_id": "vpn",
+		"name": "VPN"
+	},
+	{
+		"category_id": "vyvo-smart-chain-ecosystem",
+		"name": "Vyvo Smart Chain Ecosystem"
+	},
+	{
 		"category_id": "wallets",
 		"name": "Wallets"
+	},
+	{
+		"category_id": "wall-street-bets-themed-coins",
+		"name": "Wall Street Bets Themed"
+	},
+	{
+		"category_id": "wanchain-ecosystem",
+		"name": "Wanchain Ecosystem"
+	},
+	{
+		"category_id": "waves-ecosystem",
+		"name": "Waves Ecosystem"
 	},
 	{
 		"category_id": "web-2-brands",
@@ -1342,6 +1734,10 @@
 	{
 		"category_id": "wemix-ecosystem",
 		"name": "WEMIX Ecosystem"
+	},
+	{
+		"category_id": "wolverine-themed-coins",
+		"name": "Wolverine-Themed"
 	},
 	{
 		"category_id": "wormhole-assets",
@@ -1364,6 +1760,14 @@
 		"name": "XDC Ecosystem"
 	},
 	{
+		"category_id": "x-layer-ecosystem",
+		"name": "X Layer Ecosystem"
+	},
+	{
+		"category_id": "xrp-ledger-ecocystem",
+		"name": "XRP Ledger Ecocystem"
+	},
+	{
 		"category_id": "yearn-yfi-partnerships-mergers",
 		"name": "Yearn Ecosystem"
 	},
@@ -1380,6 +1784,18 @@
 		"name": "Yield Farming"
 	},
 	{
+		"category_id": "yield-optimizer",
+		"name": "Yield Optimizer"
+	},
+	{
+		"category_id": "yield-tokenization",
+		"name": "Yield Tokenization"
+	},
+	{
+		"category_id": "zedxion-ecosystem",
+		"name": "Zedxion Ecosystem"
+	},
+	{
 		"category_id": "zero-knowledge-zk",
 		"name": "Zero Knowledge (ZK)"
 	},
@@ -1390,6 +1806,10 @@
 	{
 		"category_id": "zilliqa-ecosystem",
 		"name": "Zilliqa Ecosystem"
+	},
+	{
+		"category_id": "zklink-nova-ecosystem",
+		"name": "zkLink Nova Ecosystem"
 	},
 	{
 		"category_id": "zksync-ecosystem",
