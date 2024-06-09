@@ -19,7 +19,6 @@ class HALVINGS_DATE(Enum):
     FOURTH = "20/04/2024"
 
 
-DAYS_INTERVAL = 250
 
 # -----------------------------------  Lectura y Escritura de archivos | Peticiones HTTP -----------------------------
 import json
