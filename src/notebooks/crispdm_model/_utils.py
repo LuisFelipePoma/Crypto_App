@@ -12,13 +12,7 @@ load_dotenv()
 # -----------------------------------  Variables TIME SERIES -----------------------------------
 
 
-class HALVINGS_DATE(Enum):
-    FIRST = "2/12/2012"
-    SECOND = "2/07/2016"
-    THIRD = "3/05/2020"
-    FOURTH = "20/04/2024"
-
-
+HALVINGS_DATE: list[str] = ["2/12/2012", "2/07/2016", "3/05/2020", "20/04/2024"]
 
 # -----------------------------------  Lectura y Escritura de archivos | Peticiones HTTP -----------------------------
 import json
