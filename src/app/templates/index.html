@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+	<!-- link js -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}" type="module"></script>
+	<!-- <script src="{{ url_for('static', filename='js/charts.js') }}" type="module"></script> -->
+
+	<title>Document</title>
+</head>
+
+<body>
+	<!-- Make a modal  with tag html native-->
+	<dialog>
+		<div>
+			<header>
+				<button type="button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+						stroke-width="1.5" stroke="#6f32be" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<path d="M10 10l4 4m0 -4l-4 4" />
+						<path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
+					</svg>
+				</button>
+
+			</header>
+			<section>
+				<div id="coin-info"></div>
+				<div class="char-info">
+					<canvas id="chart"></canvas>
+					<div id="loading-icon-dialog" class="loading-icon"></div>
+				</div>
+			</section>
+		</div>
+	</dialog>
+	<!-- REAL CODE -->
+	<header>
+		<small>
+			<input id="search-coin" placeholder="Search coin">
+		</small>
+		<h2>CoinsPepito</h2>
+	</header>
+	<main>
+		<aside>
+			<div id="loading-icon-search" class="loading-icon"></div>
+			<section id="general-coins">
+				{% for coin in coins_bubbles %}
+				<article class="coin-bubble" coin-data="{{coin}}">
+					<img src="{{coin.image}}">
+					<p>{{coin.symbol.upper()}}</p>
+				</article>
+				{% endfor %}
+			</section>
+		</aside>
+		<section id="lists-coins">
+			<div id="best_coins">
+				<h3> Mejores Monedas a invertir</h3>
+				<div class="list">
+					{% for coin in coins_bubbles %}
+					<article class="coin-bubble" coin-data="{{coin}}">
+						<img src="{{coin.image}}">
+						<p>{{coin.symbol.upper()}}</p>
+					</article>
+					{% endfor %}
+				</div>
+			</div>
+			<div id="worst_coins">
+				<h3> Peores Monedas a invertir</h3>
+				<div class="list">
+					{% for coin in coins_bubbles %}
+					<article class="coin-bubble" coin-data="{{coin}}">
+						<img src="{{coin.image}}">
+						<p>{{coin.symbol.upper()}}</p>
+					</article>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+	</main>
+	<template id="coin-bubble-template">
+		<article class="coin-bubble" coin-data="">
+			<img src="">
+			<p></p>
+		</article>
+	</template>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+	box-sizing: border-box;
+	scrollbar-color: transparent transparent;
+	font-family: "Rubik", sans-serif;
+}
+
+/* ESTILOS */
+::backdrop {
+	background-image: linear-gradient(45deg, #f3ec78, #af4261);
+	opacity: 0.75;
+}
+
+/* Dialog */
+dialog {
+	background-color: #fff;
+	border: none;
+	border-radius: 10px;
+	width: 1250px;
+
+	height: 550px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+	>div {
+		height: 100%;
+		display: grid;
+		grid-template-rows: 1fr 9fr;
+
+		header {
+			background-color: #fff;
+
+			button {
+				padding: 0;
+				margin: 0;
+				justify-self: start;
+				border: none;
+				outline: none;
+				background-color: transparent;
+				cursor: pointer;
+				width: fit-content;
+				height: fit-content;
+			}
+
+			svg {
+				width: 100%;
+				height: 100%;
+				transition: all 0.3s ease-in-out;
+
+				&:hover {
+					scale: 1.15;
+					stroke: red;
+				}
+			}
+
+		}
+
+
+		section {
+			display: grid;
+			grid-template-columns: 5fr 5fr;
+			padding: 1rem 2rem;
+
+			#coin-info {
+				height: auto;
+				display: grid;
+				grid-auto-rows: 1fr repeat(3, auto);
+
+				h2 {
+					margin: 0;
+					color: #af4261;
+					font-weight: 800;
+					font-size: 48px;
+				}
+
+				p {
+					margin: 0;
+					align-self: flex-start;
+				}
+
+				span {
+					font-weight: 600;
+				}
+			}
+
+			.char-info {
+				align-self: center;
+
+				#chart {
+					width: 200px;
+					height: 500px;
+				}
+			}
+
+		}
+	}
+}
+
+/* REAL CODE */
+header {
+	display: grid;
+	grid-template-columns: 3fr 7fr;
+
+	small {
+		align-content: center;
+		padding-left: 5%;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	#search-coin {
+		font-size: 16px;
+		padding: 10px 15px;
+		border: 1px solid #ccc;
+		border-radius: 20px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		outline: none;
+		transition: all 0.3s ease;
+	}
+
+	#search-coin:focus {
+		border-color: #007bff;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	}
+}
+
+main {
+	display: grid;
+	grid-template-columns: 3fr 7fr;
+
+	aside {
+		padding: 0 1.5rem;
+	}
+}
+
+#general-coins {
+	padding: 1rem;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+	grid-template-rows: repeat(auto-fill, minmax(80px, 1fr));
+	grid-auto-flow: row;
+	overflow-y: auto;
+	height: 850px;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.247);
+	border-radius: 8px;
+
+}
+
+#lists-coins {
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+	justify-content: space-between;
+	height: 100%;
+
+	.list {
+		flex-grow: 1;
+		margin: 0;
+		padding: 1rem 1rem;
+		width: 1200px;
+		height: 350px;
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+		grid-auto-flow: row;
+		overflow-y: auto;
+		box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.247);
+		border-radius: 8px;
+
+		article {
+			place-self: center;
+		}
+	}
+}
+
+
+
+/* General styles */
+.coin-bubble {
+	position: relative;
+	display: grid;
+	place-content: center;
+	aspect-ratio: 1/1;
+	width: 65px;
+	height: auto;
+	border-radius: 50%;
+	transition: all 0.3s ease-in-out;
+
+	img {
+		position: absolute;
+		object-fit: cover;
+		border-radius: 50%;
+		width: 100%;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	&:hover {
+		img {
+			opacity: 0.14;
+		}
+	}
+}
+
+/* a loading animation */
+.loading-icon {
+	display: none;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	border: 5px solid #f3f3f3;
+	color: #d1d1d1;
+	border-radius: 8px;
+	border-top: 5px solid #8bd89b;
+	animation: spin 1s linear infinite;
+	align-self: center;
+	place-self: center;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
