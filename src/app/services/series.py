@@ -1,20 +1,9 @@
 from datetime import datetime, timedelta
+import os
 import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-
-url = "https://api.messari.io/marketdata/v1/assets/assetId/price/time-series"
-
-headers = {
-    "accept": "application/json",
-    "x-messari-api-key": "3g1dZvb0ZBes4Bb7zqz6e5LGD0VHTvrqrhV-8LhIefMLSkps",
-}
-
-response = requests.get(url, headers=headers)
-
-print(response.text)
-
 
 class API:
     # Constructor
@@ -22,7 +11,7 @@ class API:
         self.url = "https://api.messari.io/"
         self.headers = {
             "accept": "application/json",
-            "x-messari-api-key": "3g1dZvb0ZBes4Bb7zqz6e5LGD0VHTvrqrhV-8LhIefMLSkps",
+            "x-messari-api-key": os.environ.get("API_KEY_MESSARI"),
         }
         # self.last_halving = datetime.datetime(2024, 4, 20)
         self.last_halving = datetime.strptime("20/04/2024", "%d/%m/%Y")

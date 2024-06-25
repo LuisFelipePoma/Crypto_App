@@ -16,37 +16,83 @@ $closeDialog.addEventListener('click', () => {
 //<-------------------------------  Agregamos la funcionalidad de abrir el dialog
 // Muestra informacion de la moneda
 const $coinInfo = $('#coin-info')
+const $predictionArticle = $('#prediction')
 
 function showCoinInfo (coinData) {
-  $coinInfo.innerHTML = `
-        <h2>${coinData.name}</h2>
-        <p><span>Market Cap</span>: $${coinData.market_cap.toLocaleString(
-          undefined,
-          { minimumFractionDigits: 2, maximumFractionDigits: 2 }
-        )}</p>
-        <p><span>Price</span>: $${coinData.current_price.toLocaleString(
-          undefined,
-          { minimumFractionDigits: 2, maximumFractionDigits: 2 }
-        )}</p>
-        <p><span>Volume</span>: $${coinData.total_volume.toLocaleString(
-          undefined,
-          { minimumFractionDigits: 2, maximumFractionDigits: 2 }
-        )}</p>
-        <p><span>Total supply</span>: ${coinData.total_supply.toLocaleString(
-          undefined,
-          { minimumFractionDigits: 2, maximumFractionDigits: 2 }
-        )}</p>
-        <p><span>Max. Supply</span>: ${coinData.max_supply.toLocaleString(
-          undefined,
-          { minimumFractionDigits: 2, maximumFractionDigits: 2 }
-        )}</p>
-        <p><span>Category</span>: ${coinData.category}</p>
-`
-}
+  const template = document
+    .getElementById('coinInfoTemplate')
+    .content.cloneNode(true)
 
-// Exporta la función showDialog
+  template.querySelector('h2').textContent = coinData.name
+  template.querySelector('.market-cap').textContent =
+    coinData.market_cap.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })
+  template.querySelector('.current-price').textContent =
+    coinData.current_price.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })
+  template.querySelector('.total-volume').textContent =
+    coinData.total_volume.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })
+  template.querySelector('.total-supply').textContent =
+    coinData.total_supply.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })
+  template.querySelector('.max-supply').textContent = coinData.max_supply
+    ? coinData.max_supply.toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      })
+    : 'N/A'
+  template.querySelector('.category').textContent = coinData.category
+
+  // show exchanges
+  const centralized = coinData.exchanges_centralized
+  const decentralized = coinData.exchanges_decentralized
+
+  const $centralized = template.querySelector('.centralized')
+  const $decentralized = template.querySelector('.decentralized')
+
+  $centralized.innerHTML = ''
+  $decentralized.innerHTML = ''
+
+  if (centralized.length === 0) {
+    $centralized.innerHTML = '<p>No hay exchanges centralizados</p>'
+  } else {
+    $centralized.appendChild(document.createElement('p')).textContent =
+      'Centralizados'
+    centralized.forEach(exchange => {
+      const $exchange = document.createElement('small')
+      $exchange.textContent = exchange
+      $centralized.appendChild($exchange)
+    })
+  }
+
+  if (decentralized.length === 0) {
+    $decentralized.innerHTML = '<p>No hay exchanges descentralizados</p>'
+  } else {
+    $decentralized.appendChild(document.createElement('p')).textContent =
+      'Descentralizados'
+    decentralized.forEach(exchange => {
+      const $exchange = document.createElement('small')
+      $exchange.textContent = exchange
+      $decentralized.appendChild($exchange)
+    })
+  }
+
+  $coinInfo.innerHTML = '' // Clear existing content
+  $coinInfo.appendChild(template)
+}
+// <------------------------------ función showDialog ------------------------------>
 function showDialog (event) {
   // Mostramos el modal con la predicción
+  $predictionArticle.innerHTML = ''
   $dialog.showModal()
   // Obtenemos la info del elemento
   const coin = event.getAttribute('coin-data')
@@ -65,7 +111,17 @@ function showDialog (event) {
     .then(response => response.json())
     .then(data => {
       setTimeout(() => {
+        // add prediction
+        const prediction = data.predict
+        console.log(prediction)
+        if (prediction === 1) {
+          $predictionArticle.innerHTML = `<p>Esta moneda <span class="up">aumentara</span> su precio <span class="up">x4</span></p>`
+        } else {
+          $predictionArticle.innerHTML = `<p>Esta moneda <span class="low">no aumentara</span> su precio <span class="low">x4</span></p>`
+        }
+        // plot chart
         plot_series(data.data)
+        // set styles
         $iconLoadingDialog.style.display = 'none'
         $ctx.style.display = 'block'
       }, 1000)
@@ -84,7 +140,7 @@ coins.forEach(coin => {
   })
 })
 
-// Search
+// <------------------------------ Search------------------------------>
 const $searchCoin = $('#search-coin')
 const $iconLoadingSearch = $('#loading-icon-search')
 const $generalCoinsList = $('#general-coins')
@@ -114,7 +170,6 @@ function searchCoin () {
         const $coinBubble = $coinBubbleTemplate.content
           .cloneNode(true)
           .querySelector('.coin-bubble')
-        console.log($coinBubble)
         $coinBubble.setAttribute('coin-data', JSON.stringify(coin))
         $coinBubble.querySelector('img').src = coin.image
         $coinBubble.querySelector('p').innerHTML = coin.symbol
@@ -134,3 +189,18 @@ function searchCoin () {
 }
 
 $searchCoin.addEventListener('change', searchCoin)
+
+// <------------------------------ Coins  low market ------------------------------>
+
+// <------------------------------ CHANGE BEHAVIOUR SCROLL ------------------------------>
+const $listTags = document.querySelectorAll('.list-tag')
+// Apply scroll behav
+$listTags.forEach(list => {
+  list.addEventListener('wheel', evt => {
+    evt.preventDefault() // Avoid vertical scroll
+    list.scrollBy({
+      left: evt.deltaY * 2.5, // Adjust velocity
+      behavior: 'smooth'
+    })
+  })
+})

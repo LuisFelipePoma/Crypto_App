@@ -1,4 +1,5 @@
 from flask import Flask, json, render_template, request, send_from_directory
+from matplotlib.font_manager import json_dump
 from services.coins import Coins
 
 # load environment variables
@@ -12,9 +13,11 @@ app = Flask(__name__)
 # <--------------- home
 @app.route("/")
 def home():
-    coins_bubbles = coins.get_coins_list(100)
-    return render_template("index.html", coins_bubbles=coins_bubbles)
-
+    general_coins = coins.get_coins_by_mark(100)
+    low_coins = coins.get_coins_by_mark(100, True)
+    return render_template(
+        "index.html", general_coins=general_coins, low_coins=low_coins
+    )
 
 # <--------------- APIS
 @app.route("/predict", methods=["POST"])
@@ -22,8 +25,10 @@ def predict():
     # get the body
     body = request.json
     # get the coin
-    response = coins.get_series_by_coin(body["coinId"])  # type: ignore
-    return json.dumps({"data": response})
+    data = coins.get_series_by_coin(body["coinId"])  # type: ignore
+    predict = coins.predictRF(data)
+    print(predict)
+    return json.dumps({"data": data, "predict": int(predict)})
 
 
 @app.route("/search", methods=["POST"])
@@ -34,18 +39,21 @@ def search():
     print(body)
     query = body["query"]  # type: ignore
     if not query:
-        response = coins.get_coins_list(100)
+        response = coins.get_coins_by_mark(100)
     else:
         response = coins.get_coins_search(query)  # type: ignore
     return json.dumps({"data": response})
 
-# @app.route("/best", methods=["GET"])
-# def best_coins():
-#     return 
+
+@app.route("/low", methods=["GET"])
+def low():
+    response = coins.get_coins_by_mark(10, True)
+    return json.dumps({"data": response})
+
 
 # @app.route("/worst", methods=["GET"])
 # def worst_coins():
-#     return 
+#     return
 
 # <--------------- MAIN
 if __name__ == "__main__":

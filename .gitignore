@@ -162,3 +162,4 @@ cython_debug/
 
 src/notebooks/crispdm_model/datasets/*
 !src/notebooks/crispdm_model/datasets/market_data.json
+src/datasets/json/historical.json

@@ -8,8 +8,6 @@
 	<!-- link js -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="{{ url_for('static', filename='js/main.js') }}" type="module"></script>
-	<!-- <script src="{{ url_for('static', filename='js/charts.js') }}" type="module"></script> -->
-
 	<title>Document</title>
 </head>
 
@@ -31,6 +29,7 @@
 			<section>
 				<div id="coin-info"></div>
 				<div class="char-info">
+					<small id="prediction"></small>
 					<canvas id="chart"></canvas>
 					<div id="loading-icon-dialog" class="loading-icon"></div>
 				</div>
@@ -48,7 +47,7 @@
 		<aside>
 			<div id="loading-icon-search" class="loading-icon"></div>
 			<section id="general-coins">
-				{% for coin in coins_bubbles %}
+				{% for coin in general_coins %}
 				<article class="coin-bubble" coin-data="{{coin}}">
 					<img src="{{coin.image}}">
 					<p>{{coin.symbol.upper()}}</p>
@@ -57,10 +56,10 @@
 			</section>
 		</aside>
 		<section id="lists-coins">
-			<div id="best_coins">
-				<h3> Mejores Monedas a invertir</h3>
+			<div id="low-market-coins">
+				<h3> Monedas a invertir de baja capitalizacion</h3>
 				<div class="list">
-					{% for coin in coins_bubbles %}
+					{% for coin in low_coins %}
 					<article class="coin-bubble" coin-data="{{coin}}">
 						<img src="{{coin.image}}">
 						<p>{{coin.symbol.upper()}}</p>
@@ -71,7 +70,7 @@
 			<div id="worst_coins">
 				<h3> Peores Monedas a invertir</h3>
 				<div class="list">
-					{% for coin in coins_bubbles %}
+					{% for coin in general_coins %}
 					<article class="coin-bubble" coin-data="{{coin}}">
 						<img src="{{coin.image}}">
 						<p>{{coin.symbol.upper()}}</p>
@@ -81,12 +80,27 @@
 			</div>
 		</section>
 	</main>
+	<!-- TEMPLATES -->
 	<template id="coin-bubble-template">
 		<article class="coin-bubble" coin-data="">
 			<img src="">
 			<p></p>
 		</article>
 	</template>
+	<template id="coinInfoTemplate">
+		<h2></h2>
+		<p><span>Market Cap</span>: $<span class="market-cap"></span></p>
+		<p><span>Price</span>: $<span class="current-price"></span></p>
+		<p><span>Volume</span>: $<span class="total-volume"></span></p>
+		<p><span>Total supply</span>: <span class="total-supply"></span></p>
+		<p><span>Max. Supply</span>: <span class="max-supply"></span></p>
+		<p><span>Category</span>: <span class="category"></span></p>
+		<div class="centralized list-tag">
+		</div>
+		<div class="decentralized list-tag">
+		</div>
+	</template>
+
 </body>
 
 </html>
