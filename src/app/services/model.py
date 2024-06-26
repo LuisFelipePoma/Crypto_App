@@ -20,19 +20,21 @@ features = [
     "std_macd",
 ]
 
-
-def calculate_sharper(df):
-    return (df["log_return"].mean() / df["log_return"].std()) * np.sqrt(
-        252
-    )  # Ajustado para anualización
-
+def calculate_sharper(df, risk_free_rate=0):
+    log_returns = np.log(df["close"] / df["close"].shift(1))
+    avg_return = log_returns.mean()
+    std_dev = log_returns.std()
+    
+    sharper_ratio = (avg_return - risk_free_rate) / std_dev
+    return sharper_ratio
 
 def calculate_rsi(series, period=14):
     delta = series.diff(1)
     gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
     loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
     rs = gain / loss
-    return 100 - (100 / (1 + rs))
+    rsi = 100 - (100 / (1 + rs))
+    return rsi
 
 
 def calculate_macd(df, slow=26, fast=12, signal=9):

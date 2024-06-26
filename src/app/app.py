@@ -13,8 +13,8 @@ app = Flask(__name__)
 # <--------------- home
 @app.route("/")
 def home():
-    general_coins = coins.get_coins_by_mark(1000)
-    low_coins = coins.get_coins_by_mark(1000, True)
+    general_coins = coins.get_coins_by_mark(500)
+    low_coins = coins.get_coins_by_mark(500, True)
     return render_template(
         "index.html", general_coins=general_coins, low_coins=low_coins
     )

@@ -63,7 +63,7 @@ function showCoinInfo (coinData) {
   $decentralized.innerHTML = ''
 
   if (centralized.length === 0) {
-    $centralized.innerHTML = '<p>No hay exchanges centralizados</p>'
+    $centralized.innerHTML = ''
   } else {
     $centralized.appendChild(document.createElement('p')).textContent =
       'Centralizados'
@@ -75,7 +75,7 @@ function showCoinInfo (coinData) {
   }
 
   if (decentralized.length === 0) {
-    $decentralized.innerHTML = '<p>No hay exchanges descentralizados</p>'
+    $decentralized.innerHTML = ''
   } else {
     $decentralized.appendChild(document.createElement('p')).textContent =
       'Descentralizados'
@@ -85,40 +85,51 @@ function showCoinInfo (coinData) {
       $decentralized.appendChild($exchange)
     })
   }
-	// Clear existing content
-  $coinInfo.innerHTML = '' 
+  // Clear existing content
+  $coinInfo.innerHTML = ''
   $coinInfo.appendChild(template)
 }
 
 // <------------------------------ función showMetadata ------------------------------>
 const $metadataChart = $('#metadata-chart')
-const $metadataChartTemplate = $("#metadata-chart-template")
+const $metadataChartTemplate = $('#metadata-chart-template')
 
-{/* <template id="metadata-chart-template">
-		<p><span>Sharper ratio</span class="sharper">: <span></span></p>
-		<p><span>Log Return</span class="log-return">: <span></span>%</p>
-		<p><span>Mean RSI</span>: <span class="mean-rsi"></span></p>
-		<p><span>Std RSI</span>: <span class="std-rsi"></span></p>
-		<p><span>Volatility</span>: <span class="volatility"></span>%</p>
-	</template> */}
-
-function showMetadataChart(metadata){
-	console.log(metadata.log_return)
-	const template = $metadataChartTemplate.content.cloneNode(true)
-	template.querySelector('.sharper span').textContent = metadata.sharper
-	template.querySelector('.log-return span').textContent = metadata.log_return
-	template.querySelector('.mean-rsi').textContent = metadata.mean_rsi
-	template.querySelector('.std-rsi').textContent = metadata.std_rsi
-	template.querySelector('.volatility').textContent = metadata.volatility
-	// Clear existing content
-	$metadataChart.innerHTML = ''
-	$metadataChart.appendChild(template)
+// Un RSI por debajo de 30 indica sobreventa,
+// mientras que por encima de 70 indica sobrecompra.
+function showMetadataChart (metadata) {
+  const template = $metadataChartTemplate.content.cloneNode(true)
+  template.querySelector('.sharper').textContent = Number(
+    metadata.sharper
+  ).toFixed(6)
+  template.querySelector('.log-return').textContent = Number(
+    metadata.log_return
+  ).toFixed(6)
+  // RSI
+  template.querySelector('.mean-rsi').textContent = `${Number(
+    metadata.mean_rsi
+  ).toFixed(2)}${
+    metadata.mean_rsi < 30
+      ? ' (Oversold)'
+      : metadata.mean_rsi > 70
+      ? ' (Overbought)'
+      : ' ~'
+  }`
+  template.querySelector('.mean-rsi').style.color =
+    metadata.mean_rsi < 30 ? 'green' : metadata.mean_rsi > 70 ? 'red' : 'black'
+  //
+  template.querySelector('.volatility').textContent = Number(
+    metadata.volatility
+  ).toFixed(4)
+  // Clear existing content
+  $metadataChart.innerHTML = ''
+  $metadataChart.appendChild(template)
 }
 
 // <------------------------------ función showDialog ------------------------------>
 function showDialog (event) {
   // Mostramos el modal con la predicción
   $predictionArticle.innerHTML = ''
+  $metadataChart.innerHTML = ''
   $dialog.showModal()
   // Obtenemos la info del elemento
   const coin = event.getAttribute('coin-data')
@@ -136,7 +147,7 @@ function showDialog (event) {
   })
     .then(response => response.json())
     .then(data => {
-			console.log(data)
+      console.log(data)
       setTimeout(() => {
         // add prediction
         const prediction = data.predict
@@ -145,10 +156,10 @@ function showDialog (event) {
         } else {
           $predictionArticle.innerHTML = `<p>Esta moneda <span class="low">no aumentara</span> su precio</p>`
         }
-				// show metadata
-				showMetadataChart(data.metadata)
         // plot chart
         plot_series(data.data)
+        // show metadata
+        showMetadataChart(data.metadata)
         // set styles
         $iconLoadingDialog.style.display = 'none'
         $ctx.style.display = 'block'
