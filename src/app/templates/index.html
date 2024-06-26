@@ -31,6 +31,7 @@
 				<div class="char-info">
 					<small id="prediction"></small>
 					<canvas id="chart"></canvas>
+					<article id="metadata-chart"></article>
 					<div id="loading-icon-dialog" class="loading-icon"></div>
 				</div>
 			</section>
@@ -47,12 +48,7 @@
 		<aside>
 			<div id="loading-icon-search" class="loading-icon"></div>
 			<section id="general-coins">
-				{% for coin in general_coins %}
-				<article class="coin-bubble" coin-data="{{coin}}">
-					<img src="{{coin.image}}">
-					<p>{{coin.symbol.upper()}}</p>
-				</article>
-				{% endfor %}
+
 			</section>
 		</aside>
 		<section id="lists-coins">
@@ -68,7 +64,7 @@
 				</div>
 			</div>
 			<div id="worst_coins">
-				<h3> Peores Monedas a invertir</h3>
+				<h3> Monedas a invertir de alta capitalizacion</h3>
 				<div class="list">
 					{% for coin in general_coins %}
 					<article class="coin-bubble" coin-data="{{coin}}">
@@ -87,7 +83,7 @@
 			<p></p>
 		</article>
 	</template>
-	<template id="coinInfoTemplate">
+	<template id="coin-info-template">
 		<h2></h2>
 		<p><span>Market Cap</span>: $<span class="market-cap"></span></p>
 		<p><span>Price</span>: $<span class="current-price"></span></p>
@@ -99,6 +95,13 @@
 		</div>
 		<div class="decentralized list-tag">
 		</div>
+	</template>
+	<template id="metadata-chart-template">
+		<p><span>Sharper ratio</span class="sharper">: <span></span></p>
+		<p><span>Log Return</span class="log-return">: <span></span>%</p>
+		<p><span>Mean RSI</span>: <span class="mean-rsi"></span></p>
+		<p><span>Std RSI</span>: <span class="std-rsi"></span></p>
+		<p><span>Volatility</span>: <span class="volatility"></span>%</p>
 	</template>
 
 </body>

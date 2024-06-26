@@ -1,5 +1,5 @@
-from flask import Flask, json, render_template, request, send_from_directory
-from matplotlib.font_manager import json_dump
+from importlib import metadata
+from flask import Flask, json, render_template, request
 from services.coins import Coins
 
 # load environment variables
@@ -13,11 +13,12 @@ app = Flask(__name__)
 # <--------------- home
 @app.route("/")
 def home():
-    general_coins = coins.get_coins_by_mark(100)
-    low_coins = coins.get_coins_by_mark(100, True)
+    general_coins = coins.get_coins_by_mark(1000)
+    low_coins = coins.get_coins_by_mark(1000, True)
     return render_template(
         "index.html", general_coins=general_coins, low_coins=low_coins
     )
+
 
 # <--------------- APIS
 @app.route("/predict", methods=["POST"])
@@ -26,9 +27,9 @@ def predict():
     body = request.json
     # get the coin
     data = coins.get_series_by_coin(body["coinId"])  # type: ignore
-    predict = coins.predictRF(data)
+    predict, metadata = coins.predictRF(data)
     print(predict)
-    return json.dumps({"data": data, "predict": int(predict)})
+    return json.dumps({"data": data, "predict": int(predict), "metadata": metadata})
 
 
 @app.route("/search", methods=["POST"])
@@ -50,10 +51,6 @@ def low():
     response = coins.get_coins_by_mark(10, True)
     return json.dumps({"data": response})
 
-
-# @app.route("/worst", methods=["GET"])
-# def worst_coins():
-#     return
 
 # <--------------- MAIN
 if __name__ == "__main__":

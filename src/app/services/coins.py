@@ -1,5 +1,5 @@
 import pandas as pd
-from services.model import ClassifierRandomCoin
+from services.model import ClassifierRandomCoin, ClassifierDnnCoin
 from services.series import API
 
 
@@ -18,6 +18,7 @@ class Coins:
     def __init__(self):
         self.repository = CoinsRepository()
         self.apiService = API()
+        self.modelDnn = ClassifierDnnCoin()
         self.modelRF = ClassifierRandomCoin()
 
     def get_coins_by_mark(self, n: int,descending:bool=False):
@@ -32,6 +33,7 @@ class Coins:
         ].to_dict(orient="records")
     
     def predictRF(self,data:list[dict]):
-        prediction = self.modelRF.predict(data)
-        return prediction
+        prediction = self.modelDnn.predict(data)
+        metadata = self.modelRF.features(data)
+        return prediction,metadata
     

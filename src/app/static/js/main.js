@@ -20,7 +20,7 @@ const $predictionArticle = $('#prediction')
 
 function showCoinInfo (coinData) {
   const template = document
-    .getElementById('coinInfoTemplate')
+    .getElementById('coin-info-template')
     .content.cloneNode(true)
 
   template.querySelector('h2').textContent = coinData.name
@@ -85,10 +85,36 @@ function showCoinInfo (coinData) {
       $decentralized.appendChild($exchange)
     })
   }
-
-  $coinInfo.innerHTML = '' // Clear existing content
+	// Clear existing content
+  $coinInfo.innerHTML = '' 
   $coinInfo.appendChild(template)
 }
+
+// <------------------------------ función showMetadata ------------------------------>
+const $metadataChart = $('#metadata-chart')
+const $metadataChartTemplate = $("#metadata-chart-template")
+
+{/* <template id="metadata-chart-template">
+		<p><span>Sharper ratio</span class="sharper">: <span></span></p>
+		<p><span>Log Return</span class="log-return">: <span></span>%</p>
+		<p><span>Mean RSI</span>: <span class="mean-rsi"></span></p>
+		<p><span>Std RSI</span>: <span class="std-rsi"></span></p>
+		<p><span>Volatility</span>: <span class="volatility"></span>%</p>
+	</template> */}
+
+function showMetadataChart(metadata){
+	console.log(metadata.log_return)
+	const template = $metadataChartTemplate.content.cloneNode(true)
+	template.querySelector('.sharper span').textContent = metadata.sharper
+	template.querySelector('.log-return span').textContent = metadata.log_return
+	template.querySelector('.mean-rsi').textContent = metadata.mean_rsi
+	template.querySelector('.std-rsi').textContent = metadata.std_rsi
+	template.querySelector('.volatility').textContent = metadata.volatility
+	// Clear existing content
+	$metadataChart.innerHTML = ''
+	$metadataChart.appendChild(template)
+}
+
 // <------------------------------ función showDialog ------------------------------>
 function showDialog (event) {
   // Mostramos el modal con la predicción
@@ -110,15 +136,17 @@ function showDialog (event) {
   })
     .then(response => response.json())
     .then(data => {
+			console.log(data)
       setTimeout(() => {
         // add prediction
         const prediction = data.predict
-        console.log(prediction)
         if (prediction === 1) {
-          $predictionArticle.innerHTML = `<p>Esta moneda <span class="up">aumentara</span> su precio <span class="up">x4</span></p>`
+          $predictionArticle.innerHTML = `<p>Esta moneda <span class="up">aumentara</span> su precio <span class="up">x2</span></p>`
         } else {
-          $predictionArticle.innerHTML = `<p>Esta moneda <span class="low">no aumentara</span> su precio <span class="low">x4</span></p>`
+          $predictionArticle.innerHTML = `<p>Esta moneda <span class="low">no aumentara</span> su precio</p>`
         }
+				// show metadata
+				showMetadataChart(data.metadata)
         // plot chart
         plot_series(data.data)
         // set styles

@@ -1,6 +1,8 @@
 import joblib
 import numpy as np
 import pandas as pd
+from datetime import datetime
+from tensorflow.keras.models import load_model # type: ignore
 
 features = [
     "sharper",
@@ -80,3 +82,79 @@ class ClassifierRandomCoin:
         prediction = self.model.predict(x)
         print(prediction)
         return prediction[0]
+    
+    def features(self, data: list[dict]):
+        x = pd.DataFrame(data)
+        features = self.__get_features(x)
+        return features.to_dict(orient="records")[0]
+
+
+# --------------------------------------------------------------
+
+def calculate_levelup(v1: float, v2: float) -> float:
+    if v1 == 0 or v2 == 0:
+        return 0.0
+    return float((v2 - v1) / v1)
+
+def get_datetime(date: str) -> datetime:
+    return datetime.strptime(date, "%d/%m/%Y")
+
+def get_data_dates(group: pd.DataFrame, MD: int, ED: int):
+    start_date = group.index.min()
+    start = group.loc[[start_date]].close.values[0]
+    middle = group.iloc[[MD]].close.values[0]
+    end =group.iloc[[ED]].close.values[0]
+    return (
+        start,
+        middle,
+        end,
+    )
+    
+def create_data(group:pd.DataFrame, MD: int, ED: int) -> dict:
+    h_start, h_md, h_ed = get_data_dates(group, MD, ED)
+    new_halving = {
+        "h_start": h_start,
+        f"h_{MD}d": h_md,
+        f"h_{ED}d": h_ed,
+        f"h_{MD}d_change": calculate_levelup(h_start, h_md),
+        f"h_{ED}d_change": calculate_levelup(h_start, h_ed),
+        "h_max": group.close.max(),
+    }
+    return new_halving
+    
+class ClassifierDnnCoin:
+    def __init__(self):
+        # self.scaler = ...
+        self.model = load_model("../models/best_model2.keras")
+ 
+    def __get_features(self,df:pd.DataFrame):
+        size_series = df.shape[0]
+        print(size_series)
+        # variables dynamic
+        MD = int(size_series * 0.3)
+        ED = int(size_series * 0.6)
+        h = create_data(df,MD, ED)
+        features = {
+            "h_start": h["h_start"],
+            f"h_{MD}d": h[f"h_{MD}d"],
+            f"h_{MD}d_change": h[f"h_{MD}d_change"],
+            f"h_{ED}d": h[f"h_{ED}d"],
+            f"h_{ED}d_change": h[f"h_{ED}d_change"],
+            "h_max": h["h_max"],
+        }
+        
+        return pd.DataFrame([features])
+        
+        
+    
+    def predict(self, data:list[dict]):
+        
+        df = pd.DataFrame(data)
+        # col "timestamp" to datetime
+        df["timestamp"] = df["timestamp"].apply(lambda x: datetime.fromtimestamp(x))
+        df.set_index("timestamp", inplace=True)
+        features = self.__get_features(df)
+        # predict
+        prediction = self.model.predict(features)
+        print(prediction)
+        return 1 if prediction[0][0] > 0.5 else 0
