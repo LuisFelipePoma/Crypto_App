@@ -181,12 +181,10 @@ coins.forEach(coin => {
 
 // <------------------------------ Search------------------------------>
 const $searchCoin = $('#search-coin')
-const $iconLoadingSearch = $('#loading-icon-search')
 const $generalCoinsList = $('#general-coins')
 const $coinBubbleTemplate = $('#coin-bubble-template')
 
 function searchCoin () {
-  $iconLoadingSearch.style.display = 'flex'
   fetch('/search', {
     method: 'POST',
     headers: {
@@ -200,7 +198,6 @@ function searchCoin () {
       if (coins.length === 0) {
         $generalCoinsList.innerHTML =
           '<h6><br>No tenemos monedas con ese nombre.</br><h6>'
-        $iconLoadingSearch.style.display = 'none'
         return
       }
 
@@ -219,11 +216,9 @@ function searchCoin () {
         })
         $generalCoinsList.appendChild($coinBubble)
       })
-      $iconLoadingSearch.style.display = 'none'
     })
     .catch(error => {
       console.error('Error fetching movies:', error)
-      $iconLoadingSearch.style.display = 'none'
     })
 }
 
