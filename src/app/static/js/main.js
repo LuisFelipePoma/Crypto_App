@@ -9,6 +9,7 @@ const $ctx = document.getElementById('chart')
 // Agregamos eventos a los botones de la página
 const $closeDialog = document.querySelector('dialog button')
 const $dialog = document.querySelector('dialog')
+
 $closeDialog.addEventListener('click', () => {
   $dialog.close()
 })
