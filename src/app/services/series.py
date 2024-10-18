@@ -1,9 +1,11 @@
 from datetime import datetime, timedelta
+from multiprocessing import process
 import os
 import requests
 from dotenv import load_dotenv
 
 load_dotenv()
+
 
 class API:
     # Constructor
@@ -11,13 +13,12 @@ class API:
         self.url = "https://api.messari.io/"
         self.headers = {
             "accept": "application/json",
-            "x-messari-api-key": "3g1dZvb0ZBes4Bb7zqz6e5LGD0VHTvrqrhV-8LhIefMLSkps",
+            "x-messari-api-key": os.environ.get("API_KEY_MESSARI"),
         }
         # self.last_halving = datetime.datetime(2024, 4, 20)
         print(os.environ.get("API_KEY_MESSARI"))
         # self.last_halving = datetime.strptime("20/04/2024", "%d/%m/%Y")
-        self.last_halving = datetime.now() - timedelta(days=100)
-        
+        self.last_halving = datetime.now() - timedelta(days=50)
 
     def get_time_series(self, coin_id: str):
         start_time, end_time = self.__get_start_end()

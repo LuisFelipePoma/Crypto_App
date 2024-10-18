@@ -1,4 +1,3 @@
-from importlib import metadata
 from flask import Flask, json, render_template, request
 from services.coins import Coins
 
