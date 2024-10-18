@@ -11,15 +11,19 @@ class API:
         self.url = "https://api.messari.io/"
         self.headers = {
             "accept": "application/json",
-            "x-messari-api-key": os.environ.get("API_KEY_MESSARI"),
+            "x-messari-api-key": "3g1dZvb0ZBes4Bb7zqz6e5LGD0VHTvrqrhV-8LhIefMLSkps",
         }
         # self.last_halving = datetime.datetime(2024, 4, 20)
-        self.last_halving = datetime.strptime("20/04/2024", "%d/%m/%Y")
+        print(os.environ.get("API_KEY_MESSARI"))
+        # self.last_halving = datetime.strptime("20/04/2024", "%d/%m/%Y")
+        self.last_halving = datetime.now() - timedelta(days=100)
+        
 
     def get_time_series(self, coin_id: str):
         start_time, end_time = self.__get_start_end()
 
         endpoint = f"marketdata/v1/assets/{coin_id}/price/time-series?interval=1d&startTime={start_time}&endTime={end_time}"
+        print(endpoint)
         response = requests.get(self.url + endpoint, headers=self.headers)
         print("request .... : ", response)
         return response.json()["data"]
