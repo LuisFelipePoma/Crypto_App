@@ -1,0 +1,15 @@
+name: Ping Render
+
+on:
+  schedule:
+    # Corre cada 25 minutos para mantener la instancia activa
+    - cron: "*/25 * * * *"
+
+jobs:
+  ping_render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Render App
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" https://crypto-app-wmg9.onrender.com/
