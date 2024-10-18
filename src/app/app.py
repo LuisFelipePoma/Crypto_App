@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+coins = Coins()
 
 
 # <--------------- home
@@ -54,5 +55,4 @@ def low():
 
 # <--------------- MAIN
 if __name__ == "__main__":
-    coins = Coins()
     app.run(host="0.0.0.0")
