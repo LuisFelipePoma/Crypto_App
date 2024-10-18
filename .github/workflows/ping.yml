@@ -1,6 +1,9 @@
 name: Ping Render URL
 
 on:
+  push:
+      branches:
+        - main
   schedule:
     # Corre cada 25 minutos para mantener la instancia activa
     - cron: "*/25 * * * *"
