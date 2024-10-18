@@ -1,5 +1,8 @@
 {
 	"rewrites": [
-	  { "source": "/(.*)", "destination": "/static/index" }
+		{
+			"source": "/(.*)",
+			"destination": "app"
+		}
 	]
-  }
+}
