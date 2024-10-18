@@ -1,4 +1,10 @@
 {
+	"version": 2,
+	"builds": [
+		{
+			"use": "@vercel/python"
+		}
+	],
 	"rewrites": [
 		{
 			"source": "/(.*)",
