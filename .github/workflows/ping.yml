@@ -6,7 +6,7 @@ on:
         - main
   schedule:
     # Corre cada 25 minutos para mantener la instancia activa
-    - cron: "*/25 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   ping_render:
